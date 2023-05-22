@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>free4diamond</title>
+<meta charset="UTF-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+* {
+color: white;
+margin: 0;
+padding: 0;
+}
+body {
+direction: rtl;
+background: black;
+background-size: cover;
+}
+p {
+font-family: 'Cairo', arial;
+}
+.p-1 {
+font-size: 34px;
+text-align: center;
+font-weight: 600;
+color: green;
+}
+
+.p-2,.p-3,.p-4 {
+font-size: 20px;
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+}
+#myInput {
+display: none;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+button {
+color: black;
+margin-bottom: 15px;
+}
+.aaa {
+width: 100%;
+display: flex;
+justify-content: center;
+
+}
+.p-2,  button {
+margin-right: 10px;
+}
+
+</style>
+</head>
+<body>
+<!-- this is paragraph -->
+<p class="p-1"> لكي تتمكن من مشاهدة الفديو </p>
+<br><br>
+<p class="p-2">
+<strong>1.</strong> قم بنسخ  الرابط اسفله وانشره في 5 مجموعات على الفيسبوك (لن يشتغل الفديو الى بعد نشر الرابط  في 5 مجموعات)  
+</p>
+<!-------------->
+
+<br><br>
+
+<!-- this is button Clipboard  -->
+<div class="tooltip">
+
+<button onclick="myFunction()" onmouseout="outFunc()">
+  <span class="tooltiptext" id="myTooltip">نسخ الرابط</span>
+  اضغط هنا لنسخ الرابط
+  </button>
+</div>
+<input type="text" value="فضيحة اليوم هههه علام الخوت 
+الرابط :" id="myInput">
+<!-------------->
+
+<br><br><br>
+
+<!-- this is paragraph -->
+
+<!-------------->
+
+
+<!-- this is ifram -->
+<div class="aaa">
+<video width="600" controls>
+
+</video>
+</div>
+<!-------------->
+
+<!-- this is script js -->
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "تم النسخ" ;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "نسخ الرابط";
+}
+</script>
+<!-------------->
+</body>
+</html>
